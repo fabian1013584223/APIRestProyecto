@@ -1,12 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Shared.DataTransferObjects;
-using Service.Contracts;
-using AutoMapper;
+﻿using AutoMapper;
 using Contracts;
+using Entities.Exceptions;
+using Entities.Models;
+using Service.Contracts;
+using Shared.DataTransferObjects;
 
 
 namespace Service

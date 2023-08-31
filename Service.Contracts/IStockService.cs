@@ -1,14 +1,13 @@
 ﻿using Shared.DataTransferObjects;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace Service.Contracts
+namespace Service.Contracts;
+
+public interface ICompanyService
 {
-    public interface IStockService
-    {
-        IEnumerable<StockDTO> GetAllStocks(bool trackChanges);
-    }
+    IEnumerable<StockDTO> GetAllStocks(bool trackChanges);
+    StockDTO GetStock(Guid stockId, bool trackChanges);
+    StockDTO CreateStock(StockForCreationDTO stock);
+    IEnumerable<StockDTO> GetByIds(IEnumerable<Guid> ids, bool trackChanges);
+    (IEnumerable<StockDTO> stock, string ids) CreateStockCollection
+        (IEnumerable<StockForCreationDTO> companyCollection);
 }

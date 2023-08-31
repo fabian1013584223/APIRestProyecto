@@ -1,14 +1,11 @@
 ﻿using Shared.DataTransferObjects;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace Service.Contracts
+namespace Service.Contracts;
+
+public interface IEmployeeService
 {
-    public interface IProductoService
-    {
-        IEnumerable<ProductoDTO> GetAllProductos(bool trackChanges);
-    }
+    IEnumerable<ProductoDTO> GetProducto(Guid productoId, bool trackChanges);
+    ProductoDTO GetProducto(Guid productoId, Guid id, bool trackChanges);
+    ProductoDTO CreateProductoForStock(Guid companyId, ProductoForCreationDTO employeeForCreation, bool trackChanges);
+    void DeleteProductoForStock(Guid companyId, Guid id, bool trackChanges);
 }
