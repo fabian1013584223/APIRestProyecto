@@ -2,12 +2,12 @@
 
 namespace Service.Contracts;
 
-public interface ICompanyService
+public interface IStockService
 {
     IEnumerable<StockDTO> GetAllStocks(bool trackChanges);
     StockDTO GetStock(Guid stockId, bool trackChanges);
     StockDTO CreateStock(StockForCreationDTO stock);
     IEnumerable<StockDTO> GetByIds(IEnumerable<Guid> ids, bool trackChanges);
-    (IEnumerable<StockDTO> stock, string ids) CreateStockCollection
-        (IEnumerable<StockForCreationDTO> companyCollection);
+    (IEnumerable<StockDTO> stocks, string ids) CreateStockCollection
+        (IEnumerable<StockForCreationDTO> stockCollection);
 }

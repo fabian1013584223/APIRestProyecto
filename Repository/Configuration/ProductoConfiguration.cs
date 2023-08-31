@@ -16,7 +16,7 @@ namespace Repository.Configuration
             builder.HasData(
                 new Producto
                 {
-                    Id = 1,
+                    productoId = new Guid("F4CE3B0A-653F-408A-B964-8A32B15A054A"),
                     Nombre = "Computador Samsung 2018",
                     Cantidad = "1",
                     Precio = "2600000",
@@ -25,7 +25,7 @@ namespace Repository.Configuration
                 },
                 new Producto
                 {
-                    Id = 2,
+                    productoId = new Guid("454EAA62-3FCD-4EAC-A435-C9523BB2B821"),
                     Nombre = "Audifonos inalambricos",
                     Cantidad = "1",
                     Precio = "250000",
@@ -34,7 +34,7 @@ namespace Repository.Configuration
                 },
                 new Producto
                 {
-                    Id = 3,
+                    productoId = new Guid("46F4B7F0-E68B-4492-BE98-7E0FFC81A06D"),
                     Nombre = "Mouse inalambrico",
                     Cantidad = "1",
                     Precio = "50000",

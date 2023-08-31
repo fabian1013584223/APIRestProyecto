@@ -1,7 +1,7 @@
-﻿using CompanyEmployees.Presentation.ModelBinders;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using Service.Contracts;
 using Shared.DataTransferObjects;
+using StockProductos.Presentation.ModelBinders;
 
 namespace CompanyEmployees.Presentation.Controllers
 {
@@ -22,14 +22,14 @@ namespace CompanyEmployees.Presentation.Controllers
         }
 
         [HttpGet("{id:int}", Name = "StockById")]
-        public IActionResult GetStock(int id)
+        public IActionResult GetStock(Guid id)
         {
             var stock = _service.StockService.GetStock(id, trackChanges: false);
             return Ok(stock);
         }
 
         [HttpGet("collection/({ids})", Name = "StockCollection")]
-        public IActionResult GetStockCollection([ModelBinder(BinderType = typeof(ArrayModelBinder))] IEnumerable<int> ids)
+        public IActionResult GetStockCollection([ModelBinder(BinderType = typeof(ArrayModelBinder))] IEnumerable<Guid> ids)
         {
             var stocks = _service.StockService.GetByIds(ids, trackChanges: false);
 
@@ -44,11 +44,11 @@ namespace CompanyEmployees.Presentation.Controllers
 
             var createdStock = _service.StockService.CreateStock(stock);
 
-            return CreatedAtRoute("StockById", new { id = createdStock.Id }, createdStock);
+            return CreatedAtRoute("StockById", new { id = createdStock.stockId }, createdStock);
         }
 
         [HttpPost("collection")]
-        public IActionResult CreateStockCollection([FromBody] IEnumerable<StockForCreationDto> stockCollection)
+        public IActionResult CreateStockCollection([FromBody] IEnumerable<StockForCreationDTO> stockCollection)
         {
             var result = _service.StockService.CreateStockCollection(stockCollection);
 

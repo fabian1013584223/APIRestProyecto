@@ -3,23 +3,23 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.6.33723.286
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "APIRestProyecto", "APIRestProyecto\APIRestProyecto.csproj", "{70ECF80E-3494-43AB-AA70-B96E20FC6D8D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "APIRestProyecto", "APIRestProyecto\APIRestProyecto.csproj", "{70ECF80E-3494-43AB-AA70-B96E20FC6D8D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CompanyEmployees.Presentation", "CompanyEmployees.Presentation\CompanyEmployees.Presentation.csproj", "{F527EC59-EA74-4E06-8575-775CE666DF73}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StockProductos.Presentation", "CompanyEmployees.Presentation\StockProductos.Presentation.csproj", "{F527EC59-EA74-4E06-8575-775CE666DF73}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Contracts", "Contracts\Contracts.csproj", "{F5ACD42D-D64D-467C-848C-FB3FB47AD723}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Contracts", "Contracts\Contracts.csproj", "{F5ACD42D-D64D-467C-848C-FB3FB47AD723}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Entities", "Entities\Entities.csproj", "{C95088DC-C9C8-47BE-AEB2-C82825FC5CF6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Entities", "Entities\Entities.csproj", "{C95088DC-C9C8-47BE-AEB2-C82825FC5CF6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoggerService", "LoggerService\LoggerService.csproj", "{5CE67B58-0FB9-49EB-9F79-D6FBEAFDD42C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LoggerService", "LoggerService\LoggerService.csproj", "{5CE67B58-0FB9-49EB-9F79-D6FBEAFDD42C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Repository", "Repository\Repository.csproj", "{AD0BE44A-E385-417C-A9E8-71AD773CE1DF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Repository", "Repository\Repository.csproj", "{AD0BE44A-E385-417C-A9E8-71AD773CE1DF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Service", "Service\Service.csproj", "{35C40631-CB53-4EDE-9DD6-AB77CB1A35C2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Service", "Service\Service.csproj", "{35C40631-CB53-4EDE-9DD6-AB77CB1A35C2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Service.Contracts", "Service.Contracts\Service.Contracts.csproj", "{D70CAA28-8554-43A0-8300-4F2772E5F593}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Service.Contracts", "Service.Contracts\Service.Contracts.csproj", "{D70CAA28-8554-43A0-8300-4F2772E5F593}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shared", "Shared\Shared.csproj", "{CE5F8C89-1B4C-4A73-A8FF-88A85649C15D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Shared", "Shared\Shared.csproj", "{CE5F8C89-1B4C-4A73-A8FF-88A85649C15D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

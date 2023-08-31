@@ -13,13 +13,24 @@ namespace Repository
         public ProductoRepository(RepositoryContext repositoryContext)
             : base(repositoryContext)
         {
-
         }
 
-        public IEnumerable<Producto> GetAllProductos(bool trackChanges) =>
-            FindAll(trackChanges)
-            .OrderBy(c => c.Nombre)
+        public IEnumerable<Producto> GetProductos(Guid stockId, bool trackChanges) =>
+            FindByCondition(e => e.StockId.Equals(stockId), trackChanges)
+            .OrderBy(e => e.Nombre)
             .ToList();
 
+        public Producto GetProducto(Guid stockId, Guid id, bool trackChanges) =>
+            FindByCondition(e => e.StockId.Equals(stockId) && e.productoId.Equals(id), trackChanges)
+            .SingleOrDefault();
+
+        public void CreateProductoForStock(Guid stockId, Producto producto)
+        {
+            producto.StockId = stockId;
+            Create(producto);
+        }
+
+        public void DeleteProducto(Producto producto) => Delete(producto);
     }
 }
+

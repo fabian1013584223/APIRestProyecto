@@ -11,7 +11,11 @@ namespace Entities.Models
     public class Stock
     {
         [Column("StockId")]
-        public int Id { get; set; }
+        public Guid stockId { get; set; }
+        [Required(ErrorMessage = "Company name is a required field.")]
+        [MaxLength(60, ErrorMessage = "Maximum length for the Name is 60 characters.")]
+
+        public int productoId { get; set; }
         [Required(ErrorMessage = "Company name is a required field.")]
         [MaxLength(60, ErrorMessage = "Maximum length for the Name is 60 characters.")]
         public string? CantidadReal { get; set; }

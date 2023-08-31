@@ -11,7 +11,7 @@ namespace Entities.Models
     public class Producto
     {
         [Column("ProductoId")]
-        public int Id { get; set; }
+        public Guid productoId { get; set; }
         [Required(ErrorMessage = "Company name is a required field.")]
         [MaxLength(60, ErrorMessage = "Maximum length for the Name is 60 characters.")]
         public string? Nombre { get; set; }
@@ -21,6 +21,7 @@ namespace Entities.Models
         public string Precio { get; set; }
         public string Estado { get; set; }
         public string Lugar { get; set; }
+        public Guid StockId { get; set; }
         public ICollection<Producto> Productos { get; set; }
     }
 }

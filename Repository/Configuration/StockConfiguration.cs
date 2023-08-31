@@ -17,7 +17,7 @@ namespace Repository.Configuration
             builder.HasData(
                 new Stock
                 {
-                    Id = 1,
+                    stockId = new Guid("F7FBB9E6-BDAF-4066-BD46-8B334BA24843"),
                     CantidadReal = "150",
                     CantidadIdeal = "50",
                     CantidadMinima = "20",
@@ -26,7 +26,7 @@ namespace Repository.Configuration
                 },
                 new Stock
                 {
-                    Id = 2,
+                    stockId = new Guid("DE52AC42-4452-415C-BBEC-77169209EFBF"),
                     CantidadReal = "250",
                     CantidadIdeal = "100",
                     CantidadMinima = "30",
@@ -35,7 +35,7 @@ namespace Repository.Configuration
                 },
                 new Stock
                 {
-                    Id = 3,
+                    stockId = new Guid("D0AF07F8-115F-40B2-B206-459FE40416A8"),
                     CantidadReal = "80",
                     CantidadIdeal = "40",
                     CantidadMinima = "10",

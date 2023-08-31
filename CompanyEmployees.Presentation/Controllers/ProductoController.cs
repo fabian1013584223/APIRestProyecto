@@ -4,9 +4,9 @@ using Microsoft.AspNetCore.Mvc;
 using Service.Contracts; 
 using Shared.DataTransferObjects;
 
-namespace CompanyEmployees.Presentation.Controllers
+namespace StockProductos.Presentation.Controllers
 {
-    [Route("api/stock/{stockId}/productos/{productoId}")]
+    [Route("api/producto")]
     [ApiController]
     public class ProductoController : ControllerBase
     {
@@ -18,21 +18,21 @@ namespace CompanyEmployees.Presentation.Controllers
         }
 
         [HttpGet]
-        public IActionResult GetProductosForStock(int stockId)
+        public IActionResult GetProductosForStock(Guid stockId)
         {
             var productos = _service.ProductoService.GetProductos(stockId, trackChanges: false);
             return Ok(productos);
         }
 
-        [HttpGet("{id:int}", Name = "GetProductoForStock")]
-        public IActionResult GetProductoForStock(int stockId, int id)
+        [HttpGet("{id:guid}", Name = "GetProductoForStock")]
+        public IActionResult GetProductoForStock(Guid stockId, Guid id)
         {
             var producto = _service.ProductoService.GetProducto(stockId, id, trackChanges: false);
             return Ok(producto);
         }
 
         [HttpPost]
-        public IActionResult CreateProductoForStock(int stockId, [FromBody] ProductoForCreationDTO producto)
+        public IActionResult CreateProductoForStock(Guid stockId, [FromBody] ProductoForCreationDTO producto)
         {
             if (producto == null)
                 return BadRequest("ProductoForCreationDTO object is null");
@@ -43,8 +43,8 @@ namespace CompanyEmployees.Presentation.Controllers
                 productoToReturn);
         }
 
-        [HttpDelete("{id:int}")]
-        public IActionResult DeleteProductoForStock(int stockId, int id)
+        [HttpDelete("{id:guid}")]
+        public IActionResult DeleteProductoForStock(Guid stockId, Guid id)
         {
             _service.ProductoService.DeleteProductoForStock(stockId, id, trackChanges: false);
             return NoContent();

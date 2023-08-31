@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Shared.DataTransferObjects
 {
-    public record StockDTO(int Id, string Name, string Position);
+    public record StockDTO(Guid stockId, int CantidadReal, int CantidadIdeal);
 }
 
 
